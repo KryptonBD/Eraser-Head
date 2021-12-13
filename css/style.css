@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  --main-color: #252525;
+}
+.container {
+  color: #fff;
+  background-image: radial-gradient(#bbbfff 0.5px, var(--main-color) 0.5px);
+  background-size: 10px 10px;
+  opacity: .9;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+.main-box {
+  text-align: center;
+  background: #fff;
+  padding: 2rem;
+  width: 50%;
+  box-shadow: 1rem 1rem 2rem rgb(0 0 0 / 76%);
+}
+
+.main-box--title{
+  color: var(--main-color);
+}
+
+.main-box--title h1{
+  font-size: 2.2rem;
+}
+
+.main-box--title h2{
+  font-size: 1.6rem;
+  font-family: serif;
+}
+
+.pass_input{
+  margin-top: 1.5rem;
+}
+.pass_input input{
+  padding: 1rem;
+  width: 70%;
+  justify-content: center;
+  border-radius: .5rem;
+  outline: none;
+  font-size: 1.3rem;
+  transition: all .5s;
+}
+
+.pass_input input:placeholder{
+  font-size: 1.3rem;
+  color: darkslategrey;
+}
+
+.pass_input input:focus,
+.pass_input input:active{
+  border-color: #4caf50;
+}
+
+.pass_output{
+  height: 4rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+.buttons button{
+  border: .2rem solid var(--main-color);
+  background: var(--main-color);
+  color: #fff;
+  outline: none;
+  padding: .8rem;
+  width: 40%;
+  border-radius: .6rem;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  transition: .6s;
+}
+
+.buttons_gen{
+  cursor: pointer;
+}
+
+.buttons_gen:hover{
+  background-color: #fff;
+  color: var(--main-color);
+}
+
+.buttons_copy{
+  opacity: .5;
+  cursor: not-allowed;
+}
