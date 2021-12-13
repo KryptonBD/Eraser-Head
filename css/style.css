@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-size: 10px;
+  font-size: 62.5%;
   --main-color: #252525;
 }
 .container {
@@ -14,6 +14,7 @@
   align-items: center;
   justify-content: center;
   font-family: sans-serif;
+  position: relative;
 }
 
 .main-box {
@@ -60,11 +61,12 @@
   border-color: #4caf50;
 }
 
-.pass_output{
-  height: 4rem;
-  padding: 1rem;
-  margin-top: 1rem;
+.pass_input--err input,
+.pass_input--err input:focus{
+  border-color: #d11e27;
 }
+
+
 
 .buttons{
   display: flex;
@@ -88,12 +90,60 @@
   cursor: pointer;
 }
 
+
+.buttons_copy{
+  opacity: .5;
+  cursor: not-allowed;
+}
+.buttons_copy--mod{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.buttons_copy--mod:hover,
 .buttons_gen:hover{
   background-color: #fff;
   color: var(--main-color);
 }
 
-.buttons_copy{
-  opacity: .5;
-  cursor: not-allowed;
+p{
+  color: var(--main-color);
+  font-size: 1.5rem;
+  border-bottom: 1px dotted rgba(0, 0, 0, .75);
+}
+
+.pass_output{
+  height: 4rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: var(--main-color);
+  font-size: 2rem;
+}
+
+.pass_output--border{
+  border: 2px dotted rgba(0, 0, 0, .5);
+  justify-content: center;
+  border-radius: .5rem;
+}
+
+.copy_msg{
+  display: float;
+  position: absolute;
+  right: 1%;
+  top: 5%;
+  background: #fff;
+  color: var(--main-color);
+  padding: .8rem;
+  box-shadow: .5rem .5rem .2rem rgba(0, 0, 0, .5);
+  visibility: hidden;
+  transition: all .5s;
+}
+
+@media screen and (max-width: 619px) {
+  *{
+    font-size: 56.25%;
+  }
+  .main-box{
+    width: 90%;
+  }
 }
