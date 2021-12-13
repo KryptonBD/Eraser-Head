@@ -1,5 +1,5 @@
-# Password Generator - beta
-
+# Eraser Head
+### Password Generator - beta
 I do not want to use any online password generator to store my password, but I want to remember password easily, but easy is not secure, to make password unguessable and secure. Any given text or string it will generate a small hash.
 
 ## Todo(s)
